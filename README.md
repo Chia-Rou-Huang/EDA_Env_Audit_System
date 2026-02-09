@@ -17,24 +17,24 @@
     - **平行讀取與格式識別**：用`multiprocessing.Pool`開啟多個進程並同時讀取，讀取檔案時，根據副檔名（.json, .csv, .yaml, .tcl）自動切換不同的 load 函式。
     - **數據解析**：使用`Regex`在.json/.csv/.yaml/.tcl 多種格式檔案中，精準過濾出想要的數據。
     - **自動化處理**：
-     - ■ 稽核通過後，利用`subprocess`動態啟動下一階段 EDA 工具（如 Formality），實現 Flow 自動化。
-     - ■ 資料彙整與視覺化報表：把檢查結果存入`List of Dictionaries`，轉換成`Pandas DataFrame`，呼叫 .to_html()。   
+      - 稽核通過後，利用`subprocess`動態啟動下一階段 EDA 工具（如 Formality），實現 Flow 自動化。
+      - 資料彙整與視覺化報表：把檢查結果存入`List of Dictionaries`，轉換成`Pandas DataFrame`，呼叫 .to_html()。   
     - **內建說明模式**：提供指令使用範例，引導使用者如何執行主程式。
 
 - **專案架構**：
     - **非結構化資料解析**：從非結構化資料（如 Verilog,TCL）提取所需數據。
     - **各項目稽核**：
-     - ■ 環境一致性：利用`Python Sets`快速比對模組目錄是否缺失關鍵檔案。
-     - ■ 資源合規性：稽核各工具的記憶體分配與優先級，防止因硬體配置錯誤導致的模擬崩潰。
-     - ■ PDK 版本校驗：確保統一使用專案規定的 PDK 版本。 
+      - 環境一致性：利用`Python Sets`快速比對模組目錄是否缺失關鍵檔案。
+      - 資源合規性：稽核各工具的記憶體分配與優先級，防止因硬體配置錯誤導致的模擬崩潰。
+      - PDK 版本校驗：確保統一使用專案規定的 PDK 版本。 
     - **自動化處理**：
-     - ■ 自動生成格式化的錯誤通知信件草稿（Log），精確列出違規項與負責人。
-     - ■ 動態注入環境變數並模擬啟動 EDA 工具。
+      - 自動生成格式化的錯誤通知信件草稿（Log），精確列出違規項與負責人。
+      - 動態注入環境變數並模擬啟動 EDA 工具。
 ---
 
 ## 如何執行:
 
-請確保您的環境已安裝Python3.13，並安裝必要的第三方套件（pip install pandas pyyaml）。
+請確保您的環境已安裝Python3.13。
 
 1.Clone儲存庫
 ```
@@ -93,7 +93,7 @@ python3 main_auditor.py --help
 
 ###📁HTML report(final_report.html)
 
-
+![alt text](image.png)
 
 
 
@@ -2279,4 +2279,5 @@ EDA Design Environment Audit System/
 
 ```
 ---
+
 
