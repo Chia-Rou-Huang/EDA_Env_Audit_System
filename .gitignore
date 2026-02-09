@@ -1,0 +1,17 @@
+# --- 專案生成的數據資料 (不需上傳 GitHub和版本控制) ---
+input_data/
+output/
+
+# --- Python 自動生成的緩存檔案 ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- MacBook 系統產生的隱藏雜物 ---
+.DS_Store
+
+venv/
+.venv/
+env/
+.vscode/

@@ -1,0 +1,9 @@
+process: N7
+release_date: '2025-05-13'
+signoff_target: layout_done
+legal_pdk_version: v3.0
+required_tools:
+- VCS
+- PrimeTime
+- Formality
+- RedHawk
